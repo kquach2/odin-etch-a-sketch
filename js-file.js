@@ -11,3 +11,11 @@ for (let i = 0; i<16; i++) {
     }
     container.appendChild(newContainer);
 }
+
+const squareDivs = document.querySelectorAll('#container div div');
+//squareDivs.forEach(squareDiv => squareDiv.style['background-color'] = 'green');
+squareDivs.forEach(squareDiv => squareDiv.addEventListener('mouseover', changeColor));
+function changeColor(e) {
+    console.log(e);
+    this.style['background-color'] = 'red';
+}
